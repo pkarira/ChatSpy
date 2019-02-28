@@ -17,7 +17,7 @@ public class Call extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         Log.d("lifecycle frag","onCreateView invoked");
-        View view=inflater.inflate(R.layout.fragment_chat, container,false);
+        View view=inflater.inflate(R.layout.fragment_call, container,false);
         return view;
     }
 }
