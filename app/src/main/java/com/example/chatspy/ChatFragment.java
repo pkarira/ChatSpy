@@ -89,7 +89,12 @@ public class ChatFragment extends Fragment {
         recyclerView.setHasFixedSize(true);
         layoutManager = new LinearLayoutManager(getContext());
         recyclerView.setLayoutManager(layoutManager);
-        mAdapter = new ChatAdapter(contactAddress);
+        mAdapter = new ChatAdapter(contactAddress,new ChatAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(String item) {
+                Toast.makeText(getContext(), item, Toast.LENGTH_LONG).show();
+            }
+        });
         recyclerView.setAdapter(mAdapter);
         return view;
     }
