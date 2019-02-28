@@ -19,7 +19,7 @@ public class MessageListAdapter extends RecyclerView.Adapter {
     private Context mContext;
     private ArrayList<Message> mMessageList;
 
-    public MessageListAdapter(Context context,ArrayList<Message> messageList) {
+    public MessageListAdapter(Context context, ArrayList<Message> messageList) {
         mContext = context;
         mMessageList = messageList;
     }
@@ -33,7 +33,7 @@ public class MessageListAdapter extends RecyclerView.Adapter {
     public int getItemViewType(int position) {
         Message message = (Message) mMessageList.get(position);
 
-        if (message.getType()==1) {
+        if (message.getType() == 1) {
             return VIEW_TYPE_MESSAGE_RECEIVED;
         } else {
             return VIEW_TYPE_MESSAGE_SENT;

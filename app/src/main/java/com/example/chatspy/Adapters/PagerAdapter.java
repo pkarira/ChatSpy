@@ -6,6 +6,7 @@ import android.support.v4.app.FragmentStatePagerAdapter;
 
 import com.example.chatspy.Fragments.CallFragment;
 import com.example.chatspy.Fragments.ChatFragment;
+import com.example.chatspy.Fragments.MsgFragment;
 
 public class PagerAdapter extends FragmentStatePagerAdapter {
     public PagerAdapter(FragmentManager fm) {
@@ -18,7 +19,7 @@ public class PagerAdapter extends FragmentStatePagerAdapter {
             case 0:
                 return new ChatFragment();
             case 1:
-                return new ChatFragment();
+                return new MsgFragment();
             case 2:
                 return new CallFragment();
         }

@@ -12,14 +12,14 @@ import android.view.ViewGroup;
 import com.example.chatspy.R;
 
 public class CallFragment extends Fragment {
-    public CallFragment()
-    {
+    public CallFragment() {
 
     }
+
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        Log.d("lifecycle frag","onCreateView invoked");
-        View view=inflater.inflate(R.layout.fragment_call, container,false);
+        Log.d("lifecycle frag", "onCreateView invoked");
+        View view = inflater.inflate(R.layout.fragment_call, container, false);
         return view;
     }
 }

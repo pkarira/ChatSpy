@@ -13,10 +13,10 @@ public class MsgFragment extends Fragment {
     public MsgFragment() {
         // Required empty public constructor
     }
+
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        Log.d("here","here");
-        View view=inflater.inflate(R.layout.fragment_msg, container,false);
+        View view = inflater.inflate(R.layout.fragment_msg, container, false);
         return view;
     }
 }

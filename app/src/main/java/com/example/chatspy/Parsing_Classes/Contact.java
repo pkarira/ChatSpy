@@ -13,13 +13,16 @@ public class Contact {
     public String getAddress() {
         return address;
     }
+
     public ArrayList<Message> getMessages() {
         return messages;
     }
+
     public void setAddress(String address) {
-        this.address=address;
+        this.address = address;
     }
-    public void addMessage (Message msg) {
-        messages.add(0,msg);
+
+    public void addMessage(Message msg) {
+        messages.add(0, msg);
     }
 }

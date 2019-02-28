@@ -50,7 +50,7 @@ public class ChatFragment extends Fragment {
                 SimpleDateFormat jdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss z");
                 jdf.setTimeZone(TimeZone.getTimeZone("GMT-4"));
                 String java_date = jdf.format(new Date(Long.parseLong(date)));
-                msg.setDate(java_date.substring(0,10));
+                msg.setDate(java_date.substring(0, 10));
                 msg.setType(Integer.parseInt(cursor.getString(9)));
                 address = cursor.getString(2);
                 if (address.length() > 10)
@@ -78,7 +78,7 @@ public class ChatFragment extends Fragment {
                 SimpleDateFormat jdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss z");
                 jdf.setTimeZone(TimeZone.getTimeZone("GMT-4"));
                 String java_date = jdf.format(new Date(Long.parseLong(date)));
-                msg.setDate(java_date.substring(0,10));
+                msg.setDate(java_date.substring(0, 10));
                 msg.setType(Integer.parseInt(cursor_sent.getString(9)));
                 address = cursor_sent.getString(2);
                 if (address.length() > 10)
