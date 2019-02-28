@@ -4,12 +4,10 @@ import java.util.ArrayList;
 
 public class Contact {
     private String address;
-    private ArrayList<Message> sent;
-    private ArrayList<Message> received;
+    private ArrayList<Message> messages;
 
     Contact() {
-        sent = new ArrayList<>();
-        received = new ArrayList<>();
+        messages = new ArrayList<>();
     }
 
     public String getAddress() {
@@ -18,11 +16,7 @@ public class Contact {
     public void setAddress(String address) {
         this.address=address;
     }
-
-    public void addSent(Message msg) {
-        sent.add(msg);
-    }
-    public void addReceived(Message msg) {
-        received.add(msg);
+    public void addMessage (Message msg) {
+        messages.add(msg);
     }
 }

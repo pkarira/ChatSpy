@@ -24,19 +24,20 @@ public class BaseActivity extends AppCompatActivity {
         viewPager.setAdapter(myPagerAdapter);
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tablayout);
         tabLayout.setupWithViewPager(viewPager);
-/*        Cursor cursor = getContentResolver().query(Uri.parse("content://sms/inbox"), null, null, null, null);
-
+        Cursor cursor = getContentResolver().query(Uri.parse("content://sms"), null, null, null, null);
+        int i=0;
         if (cursor.moveToFirst()) { // must check the result to prevent exception
             do {
                 String msgData = "";
                 for(int idx=0;idx<cursor.getColumnCount();idx++)
                 {
-                    msgData += " " + cursor.getColumnName(idx) + ":" + cursor.getString(idx);
+                    Log.d("here",cursor.getColumnName(idx)+" "+cursor.getString(idx)+" "+idx);
                 }
+                i++;
                 // use msgData
-            } while (cursor.moveToNext());
+            } while (cursor.moveToNext() && i<2);
         } else {
             // empty box, no SMS
-        }*/
+        }
     }
 }
