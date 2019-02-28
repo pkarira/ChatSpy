@@ -6,8 +6,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+
 public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.ListViewHolder>{
-    private String[] mDataset;
+    private ArrayList<String> mDataset;
     public class ListViewHolder extends RecyclerView.ViewHolder {
         public TextView name;
         public ListViewHolder(View v) {
@@ -15,7 +17,7 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.ListViewHolder
             name = (TextView) v.findViewById(R.id.name);
         }
     }
-    public ChatAdapter(String[] myDataset) {
+    public ChatAdapter(ArrayList<String> myDataset) {
         mDataset = myDataset;
     }
     @Override
@@ -25,11 +27,11 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.ListViewHolder
     }
     @Override
     public void onBindViewHolder(ListViewHolder holder, int position) {
-        holder.name.setText(mDataset[position]);
+        holder.name.setText(mDataset.get(position));
 
     }
     @Override
     public int getItemCount() {
-        return mDataset.length;
+        return mDataset.size();
     }
 }

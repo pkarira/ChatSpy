@@ -13,11 +13,11 @@ public class PagerAdapter extends FragmentStatePagerAdapter {
     public Fragment getItem(int i) {
         switch (i) {
             case 0:
-                return new Chat();
+                return new ChatFragment();
             case 1:
-                return new Msg();
+                return new MsgFragment();
             case 2:
-                return new Call();
+                return new CallFragment();
         }
         return null;
     }

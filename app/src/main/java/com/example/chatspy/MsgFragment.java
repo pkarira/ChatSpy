@@ -9,8 +9,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class Msg extends Fragment {
-    public Msg() {
+public class MsgFragment extends Fragment {
+    public MsgFragment() {
         // Required empty public constructor
     }
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
