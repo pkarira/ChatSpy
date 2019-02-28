@@ -1,5 +1,7 @@
 package com.example.chatspy;
 
+import android.Manifest;
+import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.net.Uri;
 import android.support.design.widget.TabLayout;
@@ -17,8 +19,8 @@ public class BaseActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toast.makeText(getApplicationContext(),"here",Toast.LENGTH_SHORT).show();
-        final int REQUEST_CODE_ASK_PERMISSIONS = 123;
-        ActivityCompat.requestPermissions(this, new String[]{"android.permission.READ_SMS"}, REQUEST_CODE_ASK_PERMISSIONS);
+        ActivityCompat.requestPermissions(this,
+                new String[]{Manifest.permission.READ_SMS}, 1);
         ViewPager viewPager = (ViewPager) findViewById(R.id.pager);
         PagerAdapter myPagerAdapter = new PagerAdapter(getSupportFragmentManager());
         viewPager.setAdapter(myPagerAdapter);
@@ -29,15 +31,28 @@ public class BaseActivity extends AppCompatActivity {
         if (cursor.moveToFirst()) { // must check the result to prevent exception
             do {
                 String msgData = "";
-                for(int idx=0;idx<cursor.getColumnCount();idx++)
-                {
-                    Log.d("here",cursor.getColumnName(idx)+" "+cursor.getString(idx)+" "+idx);
-                }
+                Log.d("here",cursor.getColumnName(2)+" "+cursor.getString(2)+" "+2);
+                Log.d("here",cursor.getColumnName(12)+" "+cursor.getString(12)+" "+12);
+                Log.d("here",cursor.getColumnName(9)+" "+cursor.getString(9)+" "+9);
                 i++;
                 // use msgData
-            } while (cursor.moveToNext() && i<2);
+            } while (cursor.moveToNext() && i<20);
         } else {
             // empty box, no SMS
+        }
+    }
+    @Override
+    public void onRequestPermissionsResult(int requestCode,
+                                           String permissions[], int[] grantResults) {
+        switch (requestCode) {
+            case 1: {
+                if (grantResults.length > 0
+                        && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                } else {
+                    Toast.makeText(BaseActivity.this, "Permission denied to read your External storage", Toast.LENGTH_SHORT).show();
+                }
+                return;
+            }
         }
     }
 }
