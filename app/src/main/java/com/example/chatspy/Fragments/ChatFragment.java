@@ -1,4 +1,4 @@
-package com.example.chatspy;
+package com.example.chatspy.Fragments;
 
 import android.content.Intent;
 import android.database.Cursor;
@@ -12,9 +12,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.chatspy.Activities.ChatActivity;
+import com.example.chatspy.Adapters.ChatAdapter;
+import com.example.chatspy.Parsing_Classes.Contact;
+import com.example.chatspy.Parsing_Classes.Message;
+import com.example.chatspy.R;
+
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;

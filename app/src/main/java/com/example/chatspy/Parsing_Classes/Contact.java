@@ -1,4 +1,4 @@
-package com.example.chatspy;
+package com.example.chatspy.Parsing_Classes;
 
 import java.util.ArrayList;
 
@@ -6,7 +6,7 @@ public class Contact {
     private String address;
     private ArrayList<Message> messages;
 
-    Contact() {
+    public Contact() {
         messages = new ArrayList<>();
     }
 

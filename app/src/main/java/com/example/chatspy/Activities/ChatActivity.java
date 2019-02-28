@@ -1,14 +1,16 @@
-package com.example.chatspy;
+package com.example.chatspy.Activities;
 
-import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.widget.Toast;
+
+import com.example.chatspy.Fragments.ChatFragment;
+import com.example.chatspy.Parsing_Classes.Message;
+import com.example.chatspy.Adapters.MessageListAdapter;
+import com.example.chatspy.R;
 
 import java.util.ArrayList;
-import java.util.Collections;
 
 public class ChatActivity extends AppCompatActivity {
     private RecyclerView recyclerView;

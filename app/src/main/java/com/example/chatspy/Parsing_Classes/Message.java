@@ -1,4 +1,4 @@
-package com.example.chatspy;
+package com.example.chatspy.Parsing_Classes;
 
 public class Message {
     private String msg;

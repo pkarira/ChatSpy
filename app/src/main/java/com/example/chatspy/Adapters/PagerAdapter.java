@@ -1,8 +1,11 @@
-package com.example.chatspy;
+package com.example.chatspy.Adapters;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
+
+import com.example.chatspy.Fragments.CallFragment;
+import com.example.chatspy.Fragments.ChatFragment;
 
 public class PagerAdapter extends FragmentStatePagerAdapter {
     public PagerAdapter(FragmentManager fm) {

@@ -1,16 +1,16 @@
-package com.example.chatspy;
+package com.example.chatspy.Activities;
 
 import android.Manifest;
 import android.content.pm.PackageManager;
-import android.database.Cursor;
-import android.net.Uri;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.widget.Toast;
+
+import com.example.chatspy.Adapters.PagerAdapter;
+import com.example.chatspy.R;
 
 public class BaseActivity extends AppCompatActivity {
     @Override
@@ -18,20 +18,6 @@ public class BaseActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.READ_SMS}, 1);
-  /*      Cursor cursor = getContentResolver().query(Uri.parse("content://sms"), null, null, null, null);
-        int i=0;
-        if (cursor.moveToFirst()) { // must check the result to prevent exception
-            do {
-                String msgData = "";
-                Log.d("here",cursor.getColumnName(2)+" "+cursor.getString(2)+" "+2);
-                Log.d("here",cursor.getColumnName(12)+" "+cursor.getString(12)+" "+12);
-                Log.d("here",cursor.getColumnName(9)+" "+cursor.getString(9)+" "+9);
-                i++;
-                // use msgData
-            } while (cursor.moveToNext() && i<20);
-        } else {
-            // empty box, no SMS
-        }*/
     }
     @Override
     public void onRequestPermissionsResult(int requestCode,
